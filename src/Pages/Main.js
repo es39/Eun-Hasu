@@ -19,6 +19,7 @@ const IntroduceBox = styled.div`
     height: 60%;
     background-color: rgba(255, 255, 255, 0.7);
     position: absolute;
+    position: fixed;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -28,11 +29,12 @@ const MyimgWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30vw;
-    height: 40vh;
+    width: 60%;
+    height: 60%;
     > img {
-        width: 20vw;
-        height: 28vh;
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
     }
 `
 const EsInfo = styled.section`
