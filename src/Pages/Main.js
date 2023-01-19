@@ -1,4 +1,3 @@
-import { getByTitle } from '@testing-library/react'
 import React from 'react'
 import styled from 'styled-components'
 import { es_data } from '../Data/MyData'
@@ -7,9 +6,6 @@ const MainSection = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 100vw;
-    height: 100vh;
-    background-size: cover; */
     > img {
         object-fit: cover;
         width: 100vw;
@@ -18,7 +14,6 @@ const MainSection = styled.div`
         z-index: -1;
     }
 `
-
 const IntroduceBox = styled.div`
     width: 80%;
     height: 60%;
@@ -29,23 +24,29 @@ const IntroduceBox = styled.div`
     justify-content: center;
     align-items: center;
 `
-
 const MyimgWrapper = styled.div`
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    width: 30vw;
+    height: 40vh;
     > img {
-        width: 15vw;
-        height: 21vh;
+        width: 20vw;
+        height: 28vh;
     }
 `
-
-const EsInfo = styled.div`
+const EsInfo = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
 `
-
+const MyInfo = styled.section`
+    font-size: 1.3em;
+    > div {
+        margin: 5px;
+        margin-left: 20px;
+    }
+`
 
 
 export default function Main() {
@@ -54,22 +55,22 @@ export default function Main() {
                 <IntroduceBox>
                     {es_data.map(data => {
                         return (
-                            <div>
+                            <main>
                                 <EsInfo>
                                     <MyimgWrapper>
                                         <img src='eunseon.png' alt="은선 미모티콘"/>
                                     </MyimgWrapper>
-                                    <section className='myinfo'>
+                                    <MyInfo>
                                         <div className='myname'>Name: {data.name}</div>
                                         <div className='school'>Highest Level of Education: {data.school}</div>
                                         <div className='mbti'>MBTI: {data.mbti}</div>
-                                    </section>
+                                    </MyInfo>
                                 </EsInfo>
-                                <section className='mylink'>
+                                <MyInfo>
                                     <div className='github'>Git: {data.github}</div>
                                     <div className='insta'>SNS: {data.insta}</div>
-                                </section>
-                            </div>
+                                </MyInfo>
+                            </main>
                         )
                     })}
                 </IntroduceBox>
