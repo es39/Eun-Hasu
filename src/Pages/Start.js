@@ -12,16 +12,25 @@ const IconWrapper = styled.div`
     right: 0;
     bottom: 0;
     * i  {
-    font-size: 20rem;
+    font-size: 10rem;
     color: black;
     cursor: pointer;
+    &:hover{
+        color: #FFD233;
+        filter: drop-shadow(6px 6px 6px #c3c3c3);
+        // visibility: hidden;
+    }
   }
 `
 
 export default function Start() {
     return (
         <IconWrapper>
-            <Link to='/main'><i className="fa-regular fa-lightbulb"></i></Link>
+            <Link to='/main'>
+                <div>
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+            </Link>
         </IconWrapper>
     )
 }
